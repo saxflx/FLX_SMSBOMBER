@@ -1,5 +1,4 @@
 Gelistirme Asamasindadir. Onerilerinizi Bekliyorum Discord : xflx_  
-WİNDOWS  
 
   Windows  
 
