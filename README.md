@@ -1,8 +1,9 @@
 Gelistirme Asamasindadir. Onerilerinizi Bekliyorum Discord : xflx_  
 
+BU KODLAR WİNDOWS İÇİNDİR.
 
-sudo apt update && sudo apt install -y git python3 python3-pip  
+python -m pip install --upgrade pip
 git clone https://github.com/saxflx/sms_boomber_Gelistirme_Asamasinda.git    
 cd sms-_boomber-Geli-tirme-A-amas-nda  
-pip3 install requests beautifulsoup4 colorama os
-python3 sms.py
+pip install requests beautifulsoup4 colorama
+python sms.py
