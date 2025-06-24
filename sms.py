@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 import requests
 import time
@@ -243,38 +244,48 @@ def englishhome(numara):
 
 
 main = [sok, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome]
-
+os.system("cls" if os.name == "nt" else "clear")
 for line in flx:
     print(Fore.RED + line)
 
-print("Developer By : FLX                    Sms Bomber")
+print("Developer By : FLX                    Sms Bomber\n")
+print(Fore.YELLOW + "1 - Normal Sms")
+print(Fore.YELLOW + "2 - Turbo Sms")
+print(Fore.YELLOW + "3 - Çıkış")
+seçim = input(Fore.BLUE + "\nSeçim: ").strip()
 
-print(Fore.YELLOW +"1-Normal Sms")
-print(Fore.YELLOW +"2-Turbo Sms")
-print(Fore.YELLOW +"3-Çıkış")
-seçim = input(Fore.BLUE+ "\nSeçim : ")
+# Geçersiz seçim
+if seçim not in ["1", "2", "3"]:
+    sys.exit()
 
+# Çıkış
+if seçim == "3":
+    sys.exit()
+
+# Numara al
+os.system("cls" if os.name == "nt" else "clear")
+numara = input(Fore.RED + "Numara: ").strip()
+
+# Normal SMS
 if seçim == "1":
-    numara = input(Fore.RED + "\n"*500+"Numara: ")
+    os.system("cls" if os.name == "nt" else "clear")
+    aralık = input(Fore.YELLOW + "Kaç saniye arayla göndermek istersin? (Varsayılan = 1): ").strip()
+    if aralık == "":
+        aralık = 1
+    else:
+        try:
+            aralık = int(aralık)
+        except ValueError:
+            aralık = 1
 
-    print("\n" * 500)
+    os.system("cls" if os.name == "nt" else "clear")
+    adet_input = input(Fore.YELLOW + "Kaç adet sms gönderilsin? (Enter = sonsuz): ").strip()
 
-    aralık = input(Fore.YELLOW + "Kaç saniye arayla göndermek istersin?: ")
-    if aralık.strip() == "":
-        aralık = "1"
-    aralık = int(aralık)
-
-    print("\n" * 500)
-
-    adet_input = input(Fore.YELLOW + "Kaç adet sms gönderilsi(Enter = sonsuz): ")
-
-    print("\n" * 500)
-
-    if adet_input.strip() == "":
+    if adet_input == "":
         i = 0
         while True:
-            fonksiyon = main[i % len(main)]
-            fonksiyon(numara)
+            func = main[i % len(main)]
+            func(numara)
             time.sleep(aralık)
             i += 1
     else:
@@ -284,25 +295,15 @@ if seçim == "1":
             adet = len(main)
 
         for i in range(adet):
-            fonksiyon = main[i % len(main)]
-            fonksiyon(numara)
+            func = main[i % len(main)]
+            func(numara)
             time.sleep(aralık)
 
-
-
-
-
-
-if seçim == "2":
-    print("\n" * 500)
-    numara = input(Fore.RED + "Numara: ")
-    print("\n" * 500)
+# Turbo SMS
+elif seçim == "2":
+    os.system("cls" if os.name == "nt" else "clear")
     i = 0
     while True:
         func = main[i % len(main)]
         func(numara)
         i += 1
-if seçim != "1" or "2" or "3":
-    sys.exit()
-if seçim =="3":
-    sys.exit()
