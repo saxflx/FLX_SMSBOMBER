@@ -1,4 +1,5 @@
-Gelistirme Asamasindadir. Onerilerinizi Bekliyorum Discord : xflx_  
+Gelistirme Asamasindadir. Onerilerinizi Bekliyorum Discord : xflx_    
+DİKKAT : SORUMLULUK KABUL ETMİYORUM. EĞİTİM AMAÇLIDIR.  
 
   Windows  
 
