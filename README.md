@@ -1,5 +1,4 @@
-Gelistirme Asamasindadir. Onerilerinizi Bekliyorum Discord : xflx_    
-DİKKAT : SORUMLULUK KABUL ETMİYORUM. EĞİTİM AMAÇLIDIR.  
+  DİKKAT : SORUMLULUK KABUL ETMİYORUM. EĞİTİM AMAÇLIDIR.  
 
   VirusTotal Sonucu :  
 
