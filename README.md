@@ -9,9 +9,9 @@
 
     python -m pip install --upgrade pip
     git clone https://github.com/saxflx/sms_boomber_19_sms_servisi_guncel    
-    cd sms_boomber_Gelistirme_Asamasinda  
+    cd sms_boomber_19_sms_servisi_guncel  
     pip install requests beautifulsoup4 colorama
-    python sms.py   bunun linux halini yap
+    python sms.py 
  
 
   Linux  
