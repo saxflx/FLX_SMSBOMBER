@@ -1,6 +1,11 @@
 Gelistirme Asamasindadir. Onerilerinizi Bekliyorum Discord : xflx_    
 DİKKAT : SORUMLULUK KABUL ETMİYORUM. EĞİTİM AMAÇLIDIR.  
 
+  VirusTotal Sonucu :  
+
+    https://www.virustotal.com/gui/file/38ce15ca2f12999f83e2e8f0214344a222c9e71161ba210c76793d29a0cb17ef?nocache=1  
+    
+
   Windows  
 
     python -m pip install --upgrade pip
