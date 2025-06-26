@@ -1,24 +1,36 @@
-  DİKKAT : SORUMLULUK KABUL ETMİYORUM. EĞİTİM AMAÇLIDIR.  
+  DİKKAT : SORUMLULUK KABUL ETMİYORUM. EĞİTİM AMAÇLIDIR.  KİMSEYE İZİNSİZ ATMAYIN  
+  
+  ![image](https://github.com/user-attachments/assets/0c0df121-0292-4462-b9fe-52b2c960ee05)
+
+
+![image](https://github.com/user-attachments/assets/8b157510-7e59-4354-9946-70ec27a47985)
+
+
 
   VirusTotal Sonucu :  
+    
+  https://www.virustotal.com/gui/file/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 
-   https://www.virustotal.com/gui/file/38ce15ca2f12999f83e2e8f0214344a222c9e71161ba210c76793d29a0cb17ef?nocache=1  
+     
     
 
   Windows  
 
-    python -m pip install --upgrade pip
-    git clone https://github.com/saxflx/sms_boomber_19_sms_servisi_guncel    
+    python -m pip install --upgrade pip  
+    git clone https://github.com/saxflx/sms_boomber_19_sms_servisi_guncel  
     cd sms_boomber_19_sms_servisi_guncel  
-    pip install requests beautifulsoup4 colorama
-    python sms.py 
+    pip install -r requirements.txt  
+    python sms.py  
+
  
 
-  Linux  
+  Linux    
 
     python3 -m pip install --upgrade pip  
-    git clone https://github.com/saxflx/sms_boomber_Gelistirme_Asamasinda.git  
-    cd sms_boomber_Gelistirme_Asamasinda  
-    pip3 install requests beautifulsoup4 colorama  
+    git clone https://github.com/saxflx/sms_boomber_19_sms_servisi_guncel  
+    cd sms_boomber_19_sms_servisi_guncel  
+    pip3 install -r requirements.txt  
     python3 sms.py  
+ 
+
 
