@@ -26,6 +26,7 @@
     cd sms_boomber_19_sms_servisi_guncel  
     pip install -r requirements.txt  
     python sms.py  
+    
 
  
 
@@ -36,6 +37,7 @@
     cd sms_boomber_19_sms_servisi_guncel  
     pip3 install -r requirements.txt  
     python3 sms.py  
+    
  
 
 
