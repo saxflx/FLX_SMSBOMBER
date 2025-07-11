@@ -600,13 +600,18 @@ if seçim == "1":
     os.system("cls" if os.name == "nt" else "clear")
     adet_input = input(Fore.YELLOW + "Kaç adet sms gönderilsin? (Enter = sonsuz): ").strip()
     print("\n"*500)
+    for line in sms:
+        print(Fore.RED + line)
     if adet_input == "":
         i = 0
-        while True:
-            func = main[i % len(main)]
-            func(numara)
-            time.sleep(aralık)
-            i += 1
+        try:
+            while True:
+                func = main[i % len(main)]
+                func(numara)
+                i += 1
+        except KeyboardInterrupt:
+            print(Fore.RED + "\nProgram sonlandırıldı.")
+            sys.exit()
     else:
         try:
             adet = int(adet_input)
@@ -618,12 +623,24 @@ if seçim == "1":
             func(numara)
             time.sleep(aralık)
 
+
 # Turbo SMS
 elif seçim == "2":
     os.system("cls" if os.name == "nt" else "clear")
     i = 0
     print("\n" * 500)
-    while True:
-        func = main[i % len(main)]
-        func(numara)
-        i += 1
+    for line in sms:
+        print(Fore.RED + line)
+
+    length = len(main)
+    i = 0
+    try:
+        while True:
+            func = main[i]
+            func(numara)
+            i += 1
+            if i == length:
+                i = 0
+    except KeyboardInterrupt:
+        print(Fore.RED + "\nProgram sonlandırıldı.")
+        sys.exit()
