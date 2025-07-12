@@ -1,5 +1,10 @@
 izinsiz atmayın.  
-<img width="884" height="971" alt="image" src="https://github.com/user-attachments/assets/4cd968af-0b3a-4153-b100-f96157942426" />
+
+<img width="861" height="975" alt="image" src="https://github.com/user-attachments/assets/060f2091-9239-440a-8c01-08e93316d9bd" />  
+<img width="901" height="554" alt="image" src="https://github.com/user-attachments/assets/dbde8ac5-d480-4ce2-80f4-21c7279319cb" />  
+
+
+
 
 
 
