@@ -1,6 +1,8 @@
 izinsiz atmayın.  
-<img width="1098" height="793" alt="image" src="https://github.com/user-attachments/assets/63d1ca8d-a3e3-4788-9422-1e10aea32730" />  
-<img width="776" height="818" alt="image" src="https://github.com/user-attachments/assets/109ed5ec-a8f6-4e0f-b72f-8b1e128d45fe" />  
+<img width="874" height="479" alt="image" src="https://github.com/user-attachments/assets/8db0fada-33d2-4d84-893e-661cbd84b598" />  
+<img width="942" height="970" alt="image" src="https://github.com/user-attachments/assets/8022cfe8-6486-4c4d-904f-db8e2aeaab6a" />  
+
+
 
 KURULUM
 
