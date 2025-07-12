@@ -1,39 +1,10 @@
-  DİKKAT : SORUMLULUK KABUL ETMİYORUM. EĞİTİM AMAÇLIDIR.  KİMSEYE İZİNSİZ ATMAYIN  
-  
-  ![image](https://github.com/user-attachments/assets/0c0df121-0292-4462-b9fe-52b2c960ee05)
+izinsiz atmayın.  
+<img width="1098" height="793" alt="image" src="https://github.com/user-attachments/assets/63d1ca8d-a3e3-4788-9422-1e10aea32730" />  
+<img width="776" height="818" alt="image" src="https://github.com/user-attachments/assets/109ed5ec-a8f6-4e0f-b72f-8b1e128d45fe" />  
 
+KURULUM
 
-![image](https://github.com/user-attachments/assets/8b157510-7e59-4354-9946-70ec27a47985)  
-
- 
-
-
-
-   KURULUM  
-        
-
-     
-    
-
-  Windows  
-
-    python -m pip install --upgrade pip  
-    git clone https://github.com/saxflx/FLX_SMSBOOMBER.git    
-    cd FLX_SMSBOOMBER    
-    pip install -r requirements.txt  
-    python sms.py  
-    
-
- 
-
-  Linux    
-
-    python3 -m pip install --upgrade pip  
     git clone https://github.com/saxflx/FLX_SMSBOOMBER.git  
-    cd FLX_SMSBOOMBER 
+    cd FLX_SMSBOOMBER  
     pip3 install -r requirements.txt  
     python3 sms.py  
-    
- 
-
-
