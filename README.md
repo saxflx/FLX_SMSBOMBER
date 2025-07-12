@@ -1,6 +1,6 @@
 izinsiz atmayın.  
-<img width="874" height="479" alt="image" src="https://github.com/user-attachments/assets/8db0fada-33d2-4d84-893e-661cbd84b598" />  
-<img width="942" height="970" alt="image" src="https://github.com/user-attachments/assets/8022cfe8-6486-4c4d-904f-db8e2aeaab6a" />  
+<img width="884" height="971" alt="image" src="https://github.com/user-attachments/assets/4cd968af-0b3a-4153-b100-f96157942426" />
+
 
 
 
