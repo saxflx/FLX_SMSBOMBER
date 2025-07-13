@@ -5,7 +5,7 @@ izinsiz atmayın.
 
 KURULUM
 
-    git clone https://github.com/saxflx/FLX_SMSBOOMBER.git  
+    git clone https://github.com/saxflx/FLX_SMSBOMBER.git  
     cd FLX_SMSBOOMBER  
     pip3 install -r requirements.txt  
     python3 sms.py  
